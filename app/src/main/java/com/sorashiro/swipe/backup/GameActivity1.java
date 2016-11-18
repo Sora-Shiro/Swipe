@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.sorashiro.swipe.R;
 import com.sorashiro.swipe.utils.LogAndToastUtil;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnTouch;
 
@@ -26,10 +26,10 @@ import butterknife.OnTouch;
  */
 
 public class GameActivity1 extends AppCompatActivity {
-
-    @Bind(R.id.tv_card)
+    
+    @BindView(R.id.tv_card)
     TextView mCards;
-    @Bind(R.id.layout_root)
+    @BindView(R.id.layout_root)
     RelativeLayout layoutRL;
 
     //拖动卡片大于等于此距离会被考虑分类

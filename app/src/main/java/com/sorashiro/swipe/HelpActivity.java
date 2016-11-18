@@ -16,7 +16,7 @@ import com.sorashiro.swipe.utils.LogAndToastUtil;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.Observable;
 import rx.Subscriber;
@@ -31,7 +31,7 @@ import rx.Subscriber;
 
 public class HelpActivity extends AppCompatActivity{
 
-    @Bind(R.id.vp_help)
+    @BindView(R.id.vp_help)
     ViewPager mVpHelp;
 
     ArrayList<View> mViews = new ArrayList<View>();

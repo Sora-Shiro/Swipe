@@ -16,7 +16,7 @@ import com.sorashiro.swipe.data.GameSaveDataSP;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -30,13 +30,13 @@ import butterknife.OnClick;
 
 public class StoreDialog extends Dialog implements StoreRVAdapter.StoreRVAdapterEvent{
 
-    @Bind(R.id.rv_store)
+    @BindView(R.id.rv_store)
     RecyclerView mRvStore;
-    @Bind(R.id.tv_coins)
+    @BindView(R.id.tv_coins)
     TextView     mTextCoins;
-    @Bind(R.id.img_coins)
+    @BindView(R.id.img_coins)
     ImageView    mImgCoins;
-    @Bind(R.id.btn_leave_to_main)
+    @BindView(R.id.btn_leave_to_main)
     Button       mBtnLeaveToMain;
 
     int mCoins;

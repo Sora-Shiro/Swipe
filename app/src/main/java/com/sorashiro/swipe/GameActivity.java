@@ -36,7 +36,7 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnTouch;
@@ -65,55 +65,55 @@ public class GameActivity extends AppCompatActivity implements PauseDialog.Pause
     private static final String LEFT  = "L";
     private static final String RIGHT = "R";
 
-    @Bind(R.id.tv_card)
+    @BindView(R.id.tv_card)
     TextView       mTextCard;
-    @Bind(R.id.layout_root)
+    @BindView(R.id.layout_root)
     RelativeLayout mLayoutRL;
-    @Bind(R.id.layout_card)
+    @BindView(R.id.layout_card)
     RelativeLayout mLayoutCard;
-    @Bind(R.id.layout_game)
+    @BindView(R.id.layout_game)
     RelativeLayout mLayoutGame;
-    @Bind(R.id.btn_pause)
+    @BindView(R.id.btn_pause)
     Button         mBtnPause;
-    @Bind(R.id.progress_time)
+    @BindView(R.id.progress_time)
     ProgressBar    mProgressTime;
-    @Bind(R.id.tv_up)
+    @BindView(R.id.tv_up)
     TextView       mTextUp;
-    @Bind(R.id.tv_down)
+    @BindView(R.id.tv_down)
     TextView       mTextDown;
-    @Bind(R.id.tv_left)
+    @BindView(R.id.tv_left)
     TextView       mTextLeft;
-    @Bind(R.id.tv_right)
+    @BindView(R.id.tv_right)
     TextView       mTextRight;
-    @Bind(R.id.tv_score)
+    @BindView(R.id.tv_score)
     TextView       mTextScore;
-    @Bind(R.id.tv_sort)
+    @BindView(R.id.tv_sort)
     TextView       mTextSort;
-    @Bind(R.id.layout_game_start_and_over)
+    @BindView(R.id.layout_game_start_and_over)
     RelativeLayout mLayoutGameStartAndOver;
-    @Bind(R.id.tv_center)
+    @BindView(R.id.tv_center)
     TextView       mTextGameStartAndOver;
-    @Bind(R.id.img_up)
+    @BindView(R.id.img_up)
     ImageView      mImgUp;
-    @Bind(R.id.img_down)
+    @BindView(R.id.img_down)
     ImageView      mImgDown;
-    @Bind(R.id.img_left)
+    @BindView(R.id.img_left)
     ImageView      mImgLeft;
-    @Bind(R.id.img_right)
+    @BindView(R.id.img_right)
     ImageView      mImgRight;
-    @Bind(R.id.tv_combos)
+    @BindView(R.id.tv_combos)
     TextView       mTextCombos;
     //奖励拾取
-    @Bind(R.id.btn_top_left_corner)
+    @BindView(R.id.btn_top_left_corner)
     Button         mBtnTopLeft;
-    @Bind(R.id.btn_top_right_corner)
+    @BindView(R.id.btn_top_right_corner)
     Button         mBtnTopRight;
     //道具使用
-    @Bind(R.id.btn_skip_card)
+    @BindView(R.id.btn_skip_card)
     Button         mBtnSkipCard;
-    @Bind(R.id.btn_change_sort)
+    @BindView(R.id.btn_change_sort)
     Button         mBtnChangeSort;
-    @Bind(R.id.tv_odd_combos)
+    @BindView(R.id.tv_odd_combos)
     TextView       mTextOddCombos;
     //道具数量
     int mSkipCard;

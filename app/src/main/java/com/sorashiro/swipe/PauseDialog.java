@@ -13,7 +13,7 @@ import com.sorashiro.swipe.utils.AnimationUtil;
 
 import java.lang.reflect.Field;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -28,9 +28,9 @@ import butterknife.OnClick;
 
 public class PauseDialog extends Dialog {
 
-    @Bind(R.id.btn_resume)
+    @BindView(R.id.btn_resume)
     Button mBtnResume;
-    @Bind(R.id.btn_back_to_main)
+    @BindView(R.id.btn_back_to_main)
     Button mBackToMain;
 
     private PauseEvent mPauseEvent;

@@ -15,7 +15,7 @@ import com.kyleduo.switchbutton.SwitchButton;
 import com.sorashiro.swipe.data.GameSaveDataSP;
 import com.sorashiro.swipe.utils.AnimationUtil;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
@@ -37,15 +37,15 @@ public class SettingDialog extends Dialog {
 
     private SettingDialogEvent mSettingDialogEvent;
 
-    @Bind(R.id.sb_music)
+    @BindView(R.id.sb_music)
     SwitchButton mSbMusic;
-    @Bind(R.id.sb_se)
+    @BindView(R.id.sb_se)
     SwitchButton mSbSE;
-    @Bind(R.id.sb_tutorial)
+    @BindView(R.id.sb_tutorial)
     SwitchButton mSbTutorial;
-    @Bind(R.id.btn_about)
+    @BindView(R.id.btn_about)
     Button       mBtnAbout;
-    @Bind(R.id.btn_leave_to_main)
+    @BindView(R.id.btn_leave_to_main)
     Button       mLeaveToMain;
 
     public SettingDialog(Context context) {

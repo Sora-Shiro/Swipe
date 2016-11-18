@@ -22,7 +22,7 @@ import com.sorashiro.swipe.data.GameSaveDataSP;
 import com.sorashiro.swipe.data.Settings;
 import com.sorashiro.swipe.utils.AnimationUtil;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -36,9 +36,9 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements SettingDialog.SettingDialogEvent {
 
-    @Bind(R.id.btn_start)
+    @BindView(R.id.btn_start)
     Button   mBtnStart;
-    @Bind(R.id.tv_title)
+    @BindView(R.id.tv_title)
     TextView mTextTitle;
 
     MediaPlayer mMediaPlayer;

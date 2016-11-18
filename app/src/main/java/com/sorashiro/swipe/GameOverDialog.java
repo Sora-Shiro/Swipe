@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -29,15 +29,15 @@ public class GameOverDialog extends Dialog {
         void leaveAndFinish();
     }
 
-    @Bind(R.id.tv_gameover_score_value)
+    @BindView(R.id.tv_gameover_score_value)
     TextView mTextScore;
-    @Bind(R.id.tv_gameover_bonus_score_value)
+    @BindView(R.id.tv_gameover_bonus_score_value)
     TextView mTextBonus;
-    @Bind(R.id.tv_gameover_combos_value)
+    @BindView(R.id.tv_gameover_combos_value)
     TextView mTextCombos;
-    @Bind(R.id.tv_gameover_sort_value)
+    @BindView(R.id.tv_gameover_sort_value)
     TextView mTextSort;
-    @Bind(R.id.tv_gameover_coins_value)
+    @BindView(R.id.tv_gameover_coins_value)
     TextView mTextCoins;
 
     public GameOverDialog(Context context) {

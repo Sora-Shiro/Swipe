@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.sorashiro.swipe.data.GameSaveDataSP;
 import com.sorashiro.swipe.utils.AnimationUtil;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -29,11 +29,11 @@ import butterknife.OnClick;
 
 public class RankDialog extends Dialog {
 
-    @Bind(R.id.tv_max_score_value)
+    @BindView(R.id.tv_max_score_value)
     TextView mTextScore;
-    @Bind(R.id.tv_max_combos_value)
+    @BindView(R.id.tv_max_combos_value)
     TextView mTextCombos;
-    @Bind(R.id.tv_max_successful_sort_value)
+    @BindView(R.id.tv_max_successful_sort_value)
     TextView mTextSort;
 
     public RankDialog(Context context) {
