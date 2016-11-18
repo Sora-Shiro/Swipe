@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorUIGreen"
+                android:paddingBottom="30dp"
+                android:paddingTop="30dp">
+
+
+    <Button
+        android:id="@+id/btn_resume"
+        android:layout_width="80dp"
+        android:layout_height="81dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/resume"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/btn_resume"
+        android:layout_alignLeft="@id/btn_resume"
+        android:layout_alignRight="@id/btn_resume"
+        android:layout_alignStart="@id/btn_resume"
+        android:layout_below="@id/btn_resume"
+        android:gravity="center"
+        android:textSize="@dimen/pause_size"
+        android:text="@string/resume"
+        android:textColor="@color/colorUIWhite"
+        />
+
+    <Button
+        android:id="@+id/btn_back_to_main"
+        android:layout_width="80dp"
+        android:layout_height="81dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/back_to_main"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/btn_back_to_main"
+        android:layout_alignLeft="@id/btn_back_to_main"
+        android:layout_alignRight="@id/btn_back_to_main"
+        android:layout_alignStart="@id/btn_back_to_main"
+        android:layout_below="@id/btn_resume"
+        android:gravity="center"
+        android:textSize="@dimen/pause_size"
+        android:text="@string/back_to_main"
+        android:textColor="@color/colorUIWhite"
+        />
+
+</RelativeLayout>

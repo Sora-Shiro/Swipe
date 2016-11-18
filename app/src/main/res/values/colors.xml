@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="colorSortAreaGreen">#5fd9cd</color>
+    <color name="colorGreen">#B8FFB8</color>
+    <color name="colorDeepGreen">#80ff80</color>
+    <color name="colorYellow">#EAF786</color>
+    <color name="colorSwallowYellow">#f7ffba</color>
+    <color name="colorRed">#FFB5A1</color>
+    <color name="colorBlue">#B8F4FF</color>
+    <color name="colorDarkBlue">#3c5770</color>
+
+
+    <color name="colorCorrectGreen">#37a964</color>
+    <color name="colorIncorrectRed">#b65959</color>
+
+
+    <color name="colorUIGreen">#067110</color>
+    <color name="colorUIMiddleGreen">#24ab32</color>
+    <color name="colorUIWhite">#f7faf6</color>
+    <color name="colorUIDeepWhite">#e6f4e2</color>
+    <color name="colorUIBrown">#e37c0e</color>
+    <color name="colorUIProgressYin">#023704</color>
+    <color name="colorUIBlack">#f7484848</color>
+    <color name="colorUILightGreen">#ebfdde</color>
+
+
+</resources>

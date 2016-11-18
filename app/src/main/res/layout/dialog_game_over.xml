@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layout_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:clickable="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorUIGreen">
+
+        <TextView
+            android:id="@+id/tv_gameover_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/time_out"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="@dimen/game_over_title"
+            />
+
+        <TextView
+            android:id="@+id/tv_gameover_score"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_gameover_title"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/score_colon"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="@dimen/game_over_item"
+            />
+
+        <TextView
+            android:id="@+id/tv_gameover_score_value"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_gameover_title"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toEndOf="@id/tv_gameover_score"
+            android:layout_toRightOf="@id/tv_gameover_score"
+            android:background="@color/colorUIWhite"
+            android:gravity="center"
+            android:text="@string/_5"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="@dimen/game_over_item"
+            />
+
+        <TextView
+            android:id="@+id/tv_gameover_bonus_score"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_gameover_score"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/bonus_score_colon"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="@dimen/game_over_item"
+            />
+
+        <TextView
+            android:id="@+id/tv_gameover_bonus_score_value"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_gameover_score"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toEndOf="@id/tv_gameover_bonus_score"
+            android:layout_toRightOf="@id/tv_gameover_bonus_score"
+            android:background="@color/colorUIWhite"
+            android:gravity="center"
+            android:text="@string/_5"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="@dimen/game_over_item"
+            />
+
+        <TextView
+            android:id="@+id/tv_gameover_combos"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_gameover_bonus_score"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/max_combos_colon"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="@dimen/game_over_item"
+            />
+
+        <TextView
+            android:id="@+id/tv_gameover_combos_value"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_gameover_bonus_score"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toEndOf="@id/tv_gameover_combos"
+            android:layout_toRightOf="@id/tv_gameover_combos"
+            android:background="@color/colorUIWhite"
+            android:gravity="center"
+            android:text="@string/_5"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="@dimen/game_over_item"
+            />
+
+        <TextView
+            android:id="@+id/tv_gameover_sort"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_gameover_combos"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/successful_sort_colon"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="@dimen/game_over_item"
+            />
+
+        <TextView
+            android:id="@+id/tv_gameover_sort_value"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_gameover_combos"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toEndOf="@id/tv_gameover_sort"
+            android:layout_toRightOf="@id/tv_gameover_sort"
+            android:background="@color/colorUIWhite"
+            android:gravity="center"
+            android:text="@string/_5"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="@dimen/game_over_item"
+            />
+
+        <TextView
+            android:id="@+id/tv_gameover_coins"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_gameover_sort"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="@string/get_coins_colon"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="@dimen/game_over_item"
+            />
+
+        <TextView
+            android:id="@+id/tv_gameover_coins_value"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_gameover_sort"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toEndOf="@id/tv_gameover_coins"
+            android:layout_toRightOf="@id/tv_gameover_coins"
+            android:background="@color/colorUIWhite"
+            android:gravity="center"
+            android:text="@string/_5"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="@dimen/game_over_item"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="82dp"
+        android:layout_marginStart="82dp"
+        android:src="@drawable/alarm_1"/>
+
+</RelativeLayout>

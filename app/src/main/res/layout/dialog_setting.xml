@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorUIWhite"
+                android:paddingBottom="20dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/setting"
+        android:textColor="@color/colorUIGreen"
+        android:textSize="40sp"/>
+
+    <TextView
+        android:id="@+id/split_line_0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorUIGreen"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_music_config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/split_line_0"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/music"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="30sp"
+            />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/sb_music"
+            style="@style/SwitchButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:alpha="0"
+            android:checked="false"
+            app:kswBackMeasureRatio="2.2"
+            app:kswBackRadius="2dp"
+            app:kswThumbRadius="2dp"
+            app:kswTintColor="@color/colorUIMiddleGreen"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/split_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layout_music_config"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorUIGreen"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_se_config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/split_line_1"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/sound_effect"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="30sp"
+            />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/sb_se"
+            style="@style/SwitchButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:alpha="0"
+            android:checked="false"
+            app:kswBackMeasureRatio="2.2"
+            app:kswBackRadius="2dp"
+            app:kswThumbRadius="2dp"
+            app:kswTintColor="@color/colorUIMiddleGreen"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/split_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layout_se_config"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorUIGreen"
+        />
+
+    <Button
+        android:id="@+id/btn_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/split_line_2"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorUILightGreen"
+        android:padding="15dp"
+        android:text="@string/about"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/split_line_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/btn_about"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorUIGreen"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_tutorial_config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/split_line_3"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/tutorial"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="30sp"
+            />
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/sb_tutorial"
+            style="@style/SwitchButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:alpha="0"
+            android:checked="false"
+            app:kswBackMeasureRatio="2.2"
+            app:kswBackRadius="2dp"
+            app:kswThumbRadius="2dp"
+            app:kswTintColor="@color/colorUIMiddleGreen"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/split_line_4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layout_tutorial_config"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorUIGreen"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_clean_and_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/split_line_4"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_leave_to_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/colorUILightGreen"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/confirm"
+            android:textSize="25sp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

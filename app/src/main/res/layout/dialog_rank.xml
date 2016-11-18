@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorUIWhite"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/history_max"
+        android:textColor="@color/colorUIGreen"
+        android:textSize="40sp"/>
+
+    <TextView
+        android:id="@+id/split_line_0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorUIGreen"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_max_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/split_line_0"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:text="@string/max_score"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="30sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_max_score_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/_3"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="30sp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/split_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layout_max_score"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorUIGreen"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_max_combos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/split_line_1"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:text="@string/max_combos"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="30sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_max_combos_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/_3"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="30sp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/split_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layout_max_combos"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorUIGreen"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_max_successful_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/split_line_2"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3.5"
+            android:text="@string/max_successful_sort"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="30sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_max_successful_sort_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/_3"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="30sp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/split_line_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layout_max_successful_sort"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorUIGreen"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_clean_and_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_max_successful_sort"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_leave_to_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/colorUILightGreen"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/leave"
+            android:textSize="25sp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

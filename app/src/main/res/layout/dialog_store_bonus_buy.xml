@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorUIWhite"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_rv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/drop_coins_level"
+        android:textColor="@color/colorUIGreen"
+        android:textSize="25sp"/>
+
+
+    <LinearLayout
+        android:id="@+id/layout_buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_rv_title"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:id="@+id/progress_rv_level"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="3"
+            android:progress="20"
+            android:progressDrawable="@drawable/progress_store"/>
+
+        <Button
+            android:id="@+id/btn_rv_buy"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@color/colorUILightGreen"
+            android:text="@string/upgrade"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_need_coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_rv_title"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/tv_rv_title"
+        android:layout_toRightOf="@id/tv_rv_title"
+        android:gravity="center"
+        android:text="@string/next_level_need_coins"
+        android:textColor="@color/colorUIGreen"
+        android:textSize="15sp"
+        android:visibility="visible"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorUIWhite"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_rv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="@color/colorUIGreen"
+        android:text="@string/skip_card"
+        android:textSize="25sp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_rv_title"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_items_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/colorUIGreen"
+            android:gravity="center"
+            android:text="@string/_5"
+            android:textSize="22sp"/>
+
+        <Button
+            android:id="@+id/btn_rv_buy"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:background="@color/colorUILightGreen"
+            android:text="@string/you_cannot_buy_any_more"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

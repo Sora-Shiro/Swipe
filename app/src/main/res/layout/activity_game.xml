@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layout_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context="com.sorashiro.swipe.GameActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_state"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorUIGreen"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btn_pause"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/pause_button"/>
+
+        <TextView
+            android:id="@+id/tv_str_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/game_upon_tv_marginTop"
+            android:layout_toEndOf="@id/btn_pause"
+            android:layout_toRightOf="@id/btn_pause"
+            android:text="@string/score"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_str_score"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/tv_str_score"
+            android:layout_toRightOf="@id/tv_str_score"
+            android:text="@string/_0"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="23sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_str_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/game_upon_tv_marginTop"
+            android:layout_toEndOf="@id/tv_score"
+            android:layout_toRightOf="@id/tv_score"
+            android:text="@string/have_sorted"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_sort"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_str_sort"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/tv_str_sort"
+            android:layout_toRightOf="@id/tv_str_sort"
+            android:text="@string/_0"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="23sp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@id/btn_pause"
+            android:layout_marginEnd="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="35dp"
+            android:background="@color/colorUIProgressYin"/>
+
+        <ProgressBar
+            android:id="@+id/progress_time"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_pause"
+            android:layout_marginEnd="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="22dp"
+            android:progress="100"
+            android:progressDrawable="@drawable/progress_bar"
+            android:secondaryProgress="0"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_items"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorUIGreen"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_skip_card"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorUIGreen"
+            android:text="@string/skip_card"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorUIWhite"/>
+
+
+        <TextView
+            android:id="@+id/tv_odd_combos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/odd_combos"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorUIWhite"/>
+
+        <Button
+            android:id="@+id/btn_change_sort"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorUIGreen"
+            android:text="@string/change_sort"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="18sp"/>
+
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_game_and_sort_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_items"
+        android:layout_below="@id/layout_state"
+        >
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_l_center"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.13"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_r_center"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.87"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_u_center"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.14"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_d_center"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.86"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <!--边框-->
+
+        <TextView
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:background="@color/colorUIGreen"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_d_center"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_l_center"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_l_center"
+            app:layout_constraintTop_toTopOf="@+id/guideline_u_center"/>
+
+        <TextView
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:background="@color/colorUIGreen"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_d_center"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_r_center"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_r_center"
+            app:layout_constraintTop_toTopOf="@+id/guideline_u_center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:background="@color/colorUIGreen"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_u_center"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_l_center"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_r_center"
+            app:layout_constraintTop_toTopOf="@+id/guideline_u_center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:background="@color/colorUIGreen"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_d_center"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_l_center"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_r_center"
+            app:layout_constraintTop_toTopOf="@+id/guideline_d_center"/>
+
+
+        <!--中间的卡片布局界面-->
+        <RelativeLayout
+            android:id="@+id/layout_game"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_d_center"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_l_center"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_r_center"
+            app:layout_constraintTop_toTopOf="@+id/guideline_u_center">
+
+            <!--预定要放文字以外的东西，但暂时还没有放-->
+            <RelativeLayout
+                android:id="@+id/layout_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorUIGreen">
+
+                <TextView
+                    android:id="@+id/tv_card"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:gravity="center"
+                    android:text="Hello World!"
+                    android:textColor="@color/colorUIWhite"
+                    android:textSize="30sp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_l_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.06"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_l_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_r_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_r_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.94"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_lr_top"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_lr_bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.67"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <!--左右分类区-->
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorUIGreen"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/left_sort"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_lr_bottom"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_l_left"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_l_right"
+            app:layout_constraintTop_toTopOf="@+id/guideline_lr_top"
+            />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorUIGreen"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/right_sort"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_lr_bottom"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_r_left"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_r_right"
+            app:layout_constraintTop_toTopOf="@+id/guideline_lr_top"
+            />
+
+        <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorCorrectGreen"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_lr_bottom"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_l_left"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_l_right"
+            app:layout_constraintTop_toTopOf="@+id/guideline_lr_top"
+            />
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorIncorrectRed"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_lr_bottom"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_r_left"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_r_right"
+            app:layout_constraintTop_toTopOf="@+id/guideline_lr_top"
+            />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_ud_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.27"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_ud_right"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.72"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_u_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.08"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_u_bottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_d_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_d_bottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.92"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"/>
+
+        <!--上下分类区-->
+        <TextView
+            android:id="@+id/tv_up"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorUIGreen"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/up_sort"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_u_bottom"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_ud_left"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_ud_right"
+            app:layout_constraintTop_toTopOf="@+id/guideline_u_top"/>
+
+        <TextView
+            android:id="@+id/tv_down"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorUIGreen"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/down_sort"
+            android:textColor="@color/colorUIWhite"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_d_bottom"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_ud_left"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_ud_right"
+            app:layout_constraintTop_toTopOf="@+id/guideline_d_top"/>
+
+        <ImageView
+            android:id="@+id/img_up"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorCorrectGreen"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_u_bottom"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_ud_left"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_ud_right"
+            app:layout_constraintTop_toTopOf="@+id/guideline_u_top"/>
+
+        <ImageView
+            android:id="@+id/img_down"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorCorrectGreen"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_d_bottom"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_ud_left"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_ud_right"
+            app:layout_constraintTop_toTopOf="@+id/guideline_d_top"/>
+
+        <!--连击数-->
+
+        <TextView
+            android:id="@+id/tv_combos"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/ten_combos"
+            android:textColor="@color/colorUIGreen"
+            android:textSize="30sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_ud_left"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_ud_right"
+            app:layout_constraintTop_toTopOf="@+id/guideline_d_bottom"/>
+
+        <!--奖励处理-->
+
+        <Button
+            android:id="@+id/btn_top_left_corner"
+            android:layout_width="45dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/bonus_coins_anim"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_u_center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/guideline_l_center"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button
+            android:id="@+id/btn_top_right_corner"
+            android:layout_width="45dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bonus_coins_anim"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_u_center"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_r_center"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_game_start_and_over"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        >
+
+        <TextView
+            android:id="@+id/tv_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/prepare"
+            android:textColor="@color/colorUILightGreen"
+            android:textSize="60sp"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
