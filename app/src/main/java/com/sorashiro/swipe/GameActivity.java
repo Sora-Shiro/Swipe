@@ -776,7 +776,7 @@ public class GameActivity extends AppCompatActivity implements PauseDialog.Pause
     int position;
 
     private void dropSomething() {
-        int dropWhat = Settings.dropItem();
+        int dropWhat = Settings.dropItem(mScore + mCurrentTime + mCombos);
         if (dropWhat == Settings.DROP_NOTHING) {
             //Ahh, pity
             return;

@@ -90,8 +90,8 @@ public class Settings {
     }
 
     //奖励掉落概率计算
-    public static int dropItem(){
-        Random random = new Random();
+    public static int dropItem(int seed){
+        Random random = new Random(seed);
         int probability = random.nextInt(100);
         if(95 < probability && probability <= 100 && GameSaveDataSP.getCoinsBonusSwitch()){
             return DROP_COINS;
