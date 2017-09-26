@@ -659,7 +659,6 @@ public class GameActivity extends AppCompatActivity implements PauseDialog.Pause
     private void oriAreaPromptAnim(String ori, boolean ifCorrect) {
         Animation animation = AnimationUtils.loadAnimation(this,
                 R.anim.twinkle);
-        //        Animation animation = AnimationUtils.loadAnimation(this, R.anim.twinkle);
         ImageView imageView = null;
         switch (ori) {
             case UP:
@@ -712,30 +711,6 @@ public class GameActivity extends AppCompatActivity implements PauseDialog.Pause
             mTextCombos.setText(s);
             mTextCombos.setVisibility(View.VISIBLE);
         }
-//        if (mCombos % mCheckCombos == 0) {
-//            String s = "" + mCombos + getResources().getString(R.string.combos);
-//            mTextCombos.setText(s);
-//            Animation animation = AnimationUtils.loadAnimation(this,
-//                    R.anim.twinkle);
-//            final TextView finalTextView = mTextCombos;
-//            animation.setAnimationListener(new Animation.AnimationListener() {
-//                @Override
-//                public void onAnimationStart(Animation animation) {
-//                    finalTextView.setVisibility(View.VISIBLE);
-//                }
-//
-//                @Override
-//                public void onAnimationEnd(Animation animation) {
-//                    finalTextView.setVisibility(View.GONE);
-//                }
-//
-//                @Override
-//                public void onAnimationRepeat(Animation animation) {
-//
-//                }
-//            });
-//            finalTextView.startAnimation(animation);
-//        }
     }
 
     //分数计算公式代入处理
@@ -758,8 +733,10 @@ public class GameActivity extends AppCompatActivity implements PauseDialog.Pause
                 .getLayoutParams();
         float deltaX = nowX - mMoveCardX;
         float deltaY = nowY - mMoveCardY;
-        params.leftMargin = Double.valueOf((deltaX * 1.8 + mOriginalLeftMargin)).intValue();
-        params.topMargin = Double.valueOf((deltaY * 1.8 + mOriginalTopMargin)).intValue();
+        params.leftMargin = (int)(deltaX + params.leftMargin);
+        params.topMargin = (int)(deltaY + params.topMargin);
+        mMoveCardX = nowX;
+        mMoveCardY = nowY;
         view.setLayoutParams(params);
     }
 
