@@ -276,7 +276,7 @@
                     android:gravity="center"
                     android:text="Hello World!"
                     android:textColor="@color/colorUIWhite"
-                    android:textSize="24sp"/>
+                    android:textSize="30sp"/>
 
             </RelativeLayout>
 

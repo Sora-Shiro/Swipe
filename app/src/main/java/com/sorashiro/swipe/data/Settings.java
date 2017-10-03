@@ -39,6 +39,7 @@ public class Settings {
 
     //背景音乐文件名
     public static final int GAME_MUSIC = R.raw.swipe_game;
+    public static final int MAIN_MENU_MUSIC = R.raw.swipe_main_menu;
 
 
     private static final String UP    = "U";
